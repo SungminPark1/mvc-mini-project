@@ -80,7 +80,7 @@ router(app);
 var server = require('http').createServer(app);
 var io = socketio(server);
 
-app.listen(port, function(err){
+server.listen(port, function(err){
 	if(err){
 		throw err;
 	}
