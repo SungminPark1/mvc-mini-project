@@ -78,7 +78,7 @@ app.use(function(err, req, res, next){
 router(app);
 
 var server = require('http').createServer(app);
-var io = socketio(server);
+//var io = socketio(server);
 
 server.listen(port, function(err){
 	if(err){
@@ -87,7 +87,7 @@ server.listen(port, function(err){
 	console.log('Listen on port ' + port);
 });
 
-
+/*
 io.sockets.on("connection", function(socket) {
 	ioServer.onJoined(socket);
 	ioServer.onMsg(socket);
@@ -97,5 +97,5 @@ io.sockets.on("connection", function(socket) {
 setInterval(function(){
 	ioServer.update(io);
 }, 1000/60);
-
+*/
 console.log('websocket server started');
