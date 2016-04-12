@@ -95,7 +95,7 @@ io.sockets.on("connection", function(socket) {
 });
 
 setInterval(function(){
-	ioServer.update(io)
+	ioServer.update(io);
 }, 1000/60);
 
 console.log('websocket server started');
