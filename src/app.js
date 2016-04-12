@@ -77,17 +77,16 @@ app.use(function(err, req, res, next){
 
 router(app);
 
-//var server = require('http').createServer(app);
-//var io = socketio(server);
+var server = require('http').createServer(app);
+var io = socketio(server);
 
-app.listen(port, function(err){
+server.listen(port, function(err){
 	if(err){
 		throw err;
 	}
 	console.log('Listen on port ' + port);
 });
 
-/*
 io.sockets.on("connection", function(socket) {
 	ioServer.onJoined(socket);
 	ioServer.onMsg(socket);
