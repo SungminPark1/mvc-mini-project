@@ -77,10 +77,10 @@ app.use(function(err, req, res, next){
 
 router(app);
 
-var server = require('http').createServer(app);
+//var server = require('http').createServer(app);
 //var io = socketio(server);
 
-server.listen(port, function(err){
+app.listen(port, function(err){
 	if(err){
 		throw err;
 	}
