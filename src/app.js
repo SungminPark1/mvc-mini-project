@@ -77,7 +77,7 @@ app.use(function(err, req, res, next){
 
 router(app);
 
-var server = require('http').Server(app);
+var server = require('http').createServer(app);
 var io = socketio(server);
 
 server.listen(port, function(err){

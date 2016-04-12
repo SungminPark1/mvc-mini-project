@@ -3,7 +3,7 @@ var models = require('../models');
 var Account = models.Account;
 
 var gamePage =  function(req, res){
-	if(req.session.account !== null){	
+	if(req.session.account != null){	
 		res.render('game', { csrfToken: req.csrfToken(), user: req.session.account.username });
 	}
 	else{
